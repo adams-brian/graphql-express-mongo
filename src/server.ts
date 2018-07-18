@@ -1,6 +1,5 @@
 import * as http from 'http';
 import * as express from 'express';
-// import * as bodyParser from 'body-parser';
 import * as graphqlHTTP from 'express-graphql';
 import { connect, connection } from 'mongoose';
 import * as cors from 'cors';
@@ -13,9 +12,6 @@ connect('mongodb://localhost:27017');
 connection.once('open', () => { console.log('mongoose connected to database'); });
 
 const server = express();
-
-// server.use(bodyParser.json());
-// server.use(bodyParser.urlencoded({ extended: false }));
 
 // CORS
 server.use(cors());
